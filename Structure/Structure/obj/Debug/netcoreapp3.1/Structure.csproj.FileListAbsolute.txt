@@ -1,0 +1,11 @@
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\bin\Debug\netcoreapp3.1\Structure.exe
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\bin\Debug\netcoreapp3.1\Structure.deps.json
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\bin\Debug\netcoreapp3.1\Structure.runtimeconfig.json
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\bin\Debug\netcoreapp3.1\Structure.runtimeconfig.dev.json
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\bin\Debug\netcoreapp3.1\Structure.dll
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\bin\Debug\netcoreapp3.1\Structure.pdb
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\obj\Debug\netcoreapp3.1\Structure.csprojAssemblyReference.cache
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\obj\Debug\netcoreapp3.1\Structure.AssemblyInfoInputs.cache
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\obj\Debug\netcoreapp3.1\Structure.AssemblyInfo.cs
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\obj\Debug\netcoreapp3.1\Structure.dll
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\Structure\Structure\obj\Debug\netcoreapp3.1\Structure.pdb

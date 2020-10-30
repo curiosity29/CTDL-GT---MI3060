@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\doman\\OneDrive\\Desktop\\github Project\\CTDL-GT---MI3060\\BinaryTree\\BinaryTree\\BinaryTree.csproj",
+      "projectUniqueName": "C:\\Users\\doman\\source\\repos\\HUST - Project\\CTDL-GT---MI3060\\BinaryTree\\BinaryTree\\BinaryTree.csproj",
       "projectName": "BinaryTree",
-      "projectPath": "C:\\Users\\doman\\OneDrive\\Desktop\\github Project\\CTDL-GT---MI3060\\BinaryTree\\BinaryTree\\BinaryTree.csproj",
+      "projectPath": "C:\\Users\\doman\\source\\repos\\HUST - Project\\CTDL-GT---MI3060\\BinaryTree\\BinaryTree\\BinaryTree.csproj",
       "packagesPath": "C:\\Users\\doman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\doman\\OneDrive\\Desktop\\github Project\\CTDL-GT---MI3060\\BinaryTree\\BinaryTree\\obj\\",
+      "outputPath": "C:\\Users\\doman\\source\\repos\\HUST - Project\\CTDL-GT---MI3060\\BinaryTree\\BinaryTree\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

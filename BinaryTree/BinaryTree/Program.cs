@@ -15,22 +15,23 @@ namespace BinaryTree
             //input
             Console.WriteLine("Nhập biểu thức: ");
             var expression = "a+b*(c^d-e)^(f+g*h)-i";
-            //
+            //expression = Console.ReadLine();
             var varList = new List<string>() { "a", "b", "c", "d", "e","f","g", "h", "i" };
             var tokenizor = new Tokenizor();
             tokenizor.AddToken(varList);
             var infix = new List<string>(tokenizor.Tokenize(expression));
-            var postfix = BinaryTreeNode.infixToPostfix(infix);
-            foreach (string s in infix)
-            {
-                Console.Write(s);
-            }
+            var postfix = BinaryTreeNode<string>.infixToPostfix(infix);
+            ShowList(infix);
             Console.WriteLine();
-            foreach (string s in postfix)
+            ShowList(postfix);
+            //Console.WriteLine("" + BinaryTreeNode.EvaluateExpressionTree(infix));
+        }
+        public static void ShowList(List<string> list)
+        {
+            foreach(string s in list)
             {
                 Console.Write(s);
             }
-            //Console.WriteLine("" + BinaryTreeNode.EvaluateExpressionTree(infix));
         }
     }
 
@@ -69,15 +70,20 @@ namespace BinaryTree
             return list;
         }
     }
-    public class BinaryTreeNode
+    public class BinaryTreeNode<T>
     {
-        public BinaryTreeNode leftChild;
-        public BinaryTreeNode rightChild;
-        public string value;
-        public BinaryTreeNode(string value)
+        #region
+        public BinaryTreeNode<T> leftChild;
+        public BinaryTreeNode<T> rightChild;
+        public T value;
+        public BinaryTreeNode(T value)
         {
             this.value = value;
         }
+        public BinaryTreeNode()
+        {
+        }
+
         //  identifier:
         static List<string> operatorList = new List<string>()
         {
@@ -90,11 +96,9 @@ namespace BinaryTree
                 case "+":
                 case "-":
                     return 1;
-
                 case "*":
                 case "/":
                     return 2;
-
                 case "^":
                     return 3;
             }
@@ -113,6 +117,7 @@ namespace BinaryTree
         {
             throw new NotImplementedException("khong lam ma doi co an");
         }
+        #endregion
         // convert infix notation (input) to postfix notation
         public static List<string> infixToPostfix(List<string> expression)
         {
@@ -145,7 +150,7 @@ namespace BinaryTree
     }
     public class Evaluator
     {
-        public static double EvaluateExpressionTree(BinaryTreeNode node, Dictionary<string, double> variables)
+        public static double EvaluateExpressionTree(BinaryTreeNode<string> node, Dictionary<string, double> variables)
         {
             double t = 0;
             if (node.IsLeaf)
