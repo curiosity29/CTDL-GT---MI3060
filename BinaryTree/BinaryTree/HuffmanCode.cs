@@ -8,7 +8,8 @@ namespace BinaryTree
     {
         public static List<string> Encode(Dictionary<char,long> dict)
         {
-            //MyHeap<KeyValuePair<char, long>> heap = new MyHeap<KeyValuePair<char, long>>(dict);
+            var heap = new MyHeap<KeyValuePair<char, long>>(dict, dict.Count+5);
+            heap.Compare = (KeyValuePair<char, long> a, KeyValuePair<char, long> b) => a.Value.CompareTo(b.Value);
 
 
             //var listNode = new List<BinaryTreeNode<char>>();
