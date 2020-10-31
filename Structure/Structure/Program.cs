@@ -15,20 +15,46 @@ namespace Structure
         {
             WriteLine("Freshy start");
 
+            //TestStack();
+            //WriteLine();
+
+            //TestQueue();
+            //WriteLine("test ended ...\n");
+
             //TestLinkedList();
             //WriteLine("test ended ...\n");
 
             //TestDoubleLinkedList();
-            //WriteLine("test ended ...\n");
-
-            //TestStack();
             //WriteLine();
 
-            TestQueue();
-            WriteLine();
+            TestHeap();
+            //WriteLine();
+
+
 
         }
+        private void TestHeap()
+        {
+            MyHeap<int> heap = new MyHeap<int>(100);
+            heap.Push(3);
+            heap.Push(1);
+            heap.Push(2);
+            heap.Traverse();
+            heap.Push(6);
+            heap.Push(9);
+            heap.Push(0);
+            heap.Push(-1);
+            heap.Traverse();
 
+            heap.Pop();
+            heap.Pop();
+            heap.Traverse();
+            heap.Pop();
+            heap.Pop();
+            heap.Traverse();
+
+
+        }
         private void TestStack()
         {
             MyStack stack = new MyStack();
@@ -71,9 +97,7 @@ namespace Structure
             {
                 WriteLine(e.Message);
             }
-
         }
-
         private void TestLinkedList()
         {
             MyLinkedList list = new MyLinkedList();
@@ -124,7 +148,6 @@ namespace Structure
             }
             WriteLine();
         }
-
         private void TestDoubleLinkedList()
         {
             MyDoublyLinkedList list1 = new MyDoublyLinkedList();
