@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Structure;
 namespace BinaryTree
 {
     class Program
@@ -11,6 +12,7 @@ namespace BinaryTree
         }
         Program()
         {
+            
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             //input
             Console.WriteLine("Nhập biểu thức: ");

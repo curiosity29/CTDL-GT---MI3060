@@ -20,3 +20,6 @@ C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\BinaryTree\BinaryTre
 C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\BinaryTree\BinaryTree\obj\Debug\netcoreapp3.1\BinaryTree.AssemblyInfo.cs
 C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\BinaryTree\BinaryTree\obj\Debug\netcoreapp3.1\BinaryTree.dll
 C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\BinaryTree\BinaryTree\obj\Debug\netcoreapp3.1\BinaryTree.pdb
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\BinaryTree\BinaryTree\bin\Debug\netcoreapp3.1\Structure.dll
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\BinaryTree\BinaryTree\bin\Debug\netcoreapp3.1\Structure.pdb
+C:\Users\doman\source\repos\HUST - Project\CTDL-GT---MI3060\BinaryTree\BinaryTree\obj\Debug\netcoreapp3.1\BinaryTree.csproj.CopyComplete
