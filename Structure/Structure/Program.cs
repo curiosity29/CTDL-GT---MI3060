@@ -46,11 +46,11 @@ namespace Structure
             heap.Push(-1);
             heap.Traverse();
 
-            heap.Pop();
-            heap.Pop();
+            WriteLine("pop " + heap.Pop());
+            WriteLine("pop " + heap.Pop());
             heap.Traverse();
-            heap.Pop();
-            heap.Pop();
+            WriteLine("pop " + heap.Pop());
+            WriteLine("pop " + heap.Pop());
             heap.Traverse();
 
 

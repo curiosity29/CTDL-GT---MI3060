@@ -6,20 +6,58 @@ namespace BinaryTree
 {
     class HuffmanCode
     {
-        public static List<string> Encode(Dictionary<char,long> dict)
+        /// <summary>
+        /// take a list of char with weight is how frequent they appear in the file
+        /// </summary>
+        /// <param name="dict"></param>
+        /// <returns></returns>
+
+        public static Dictionary<char, string> Encode(Dictionary<char, float> dict)
         {
-            var heap = new MyHeap<KeyValuePair<char, long>>(dict, dict.Count+5);
-            heap.Compare = (KeyValuePair<char, long> a, KeyValuePair<char, long> b) => a.Value.CompareTo(b.Value);
+            var listNode = new List<Node<KeyValuePair<char, float>>>();
+            foreach (KeyValuePair<char, float> pair in dict)
+                listNode.Add(new Node<KeyValuePair<char, float>>(pair));
+            var heap = new MyHeap<Node<KeyValuePair<char, float>>>
+                (listNode, listNode.Count + 5,
+                (Node<KeyValuePair<char, float>> a, Node<KeyValuePair<char, float>> b)
+                => a.data.Value.CompareTo(b.data.Value));
 
+            Node<KeyValuePair<char, float>> parent, leftChild, rightChild;
+            int count = heap.Size;
+            //KeyValuePair<char, float> pair;
+            while (count > 1)
+            {
+                leftChild = heap.Pop();
+                rightChild = heap.Pop();
 
-            //var listNode = new List<BinaryTreeNode<char>>();
-            //var node = new BinaryTreeNode<char>();
-            //foreach(char c in dict.Keys)
-            //{
-            //    node = new BinaryTreeNode<char>(c);
-            //    listNode.Add(node);
-            //}
-            return default;
+                parent = new Node<KeyValuePair<char, float>>(
+                    new KeyValuePair<char, float>('?', leftChild.data.Value + rightChild.data.Value),
+                    leftChild, rightChild);
+
+                heap.Push(parent);
+                count--;
+            }
+            var list = new Dictionary<char, string>();
+            var root = heap.Pop();
+            return Translate(root, list, "");
+        }
+
+        private static Dictionary<char, string> Translate(Node<KeyValuePair<char, float>> node, Dictionary<char, string> dict, string current)
+        {
+            var leftChild = node.prev;
+            var rightChild = node.next;
+            if (leftChild == null)
+                if (rightChild == null)
+                    // this mean leaf
+                    dict.Add(node.data.Key, current);
+                else throw new InvalidOperationException("this tree must be complete!");
+            else
+            {
+                Translate(leftChild, dict, current + "0");
+                Translate(rightChild, dict, current + "1");
+            }
+
+            return dict;
         }
     }
 }

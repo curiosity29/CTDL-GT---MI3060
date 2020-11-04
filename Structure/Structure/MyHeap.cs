@@ -27,11 +27,12 @@ namespace Structure
             if (tree[0] is IComparable) Compare = (T a, T b) => ((IComparable)a).CompareTo(b);
             else throw new InvalidCastException("this type is not Comparable");
         }
-        public MyHeap(ICollection<T> list, int maxSize)
+        public MyHeap(ICollection<T> list, int maxSize, MyComparer comparer)
         {
+            Compare = comparer;
             tree = new T[maxSize + 1];
             foreach (T node in list)
-                this.Push(node);
+                Push(node);
         }
         #endregion
         public T Peek()
@@ -57,14 +58,17 @@ namespace Structure
             tree[index1] = tree[index2];
             tree[index2] = temp;
         }
-        public void Pop()
+        public T Pop()
         {
             if (size == 0) throw new InvalidOperationException("empty");
             //swap
+            var result = tree[1];
             tree[1] = tree[size];
+            size--;
+
             int index = 1;
             int smallChid = SmallChild(index);
-            while(smallChid > 0)
+            while(smallChid > 0)    // end when return SmallChild return -1
             {
                 if (Compare(tree[index],tree[smallChid]) > 0)
                     Swap(index, smallChid);
@@ -72,7 +76,7 @@ namespace Structure
                 index = smallChid;
                 smallChid = SmallChild(index);
             }
-            size--;
+            return result;
         }
 
         public int SmallChild(int index)
