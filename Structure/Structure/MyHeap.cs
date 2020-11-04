@@ -63,7 +63,7 @@ namespace Structure
             if (size == 0) throw new InvalidOperationException("empty");
             //swap
             var result = tree[1];
-            tree[1] = tree[size];
+            tree[1] = tree[size];   // last one up
             size--;
 
             int index = 1;

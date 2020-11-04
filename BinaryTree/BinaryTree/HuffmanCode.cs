@@ -17,8 +17,9 @@ namespace BinaryTree
             var listNode = new List<Node<KeyValuePair<char, float>>>();
             foreach (KeyValuePair<char, float> pair in dict)
                 listNode.Add(new Node<KeyValuePair<char, float>>(pair));
+
             var heap = new MyHeap<Node<KeyValuePair<char, float>>>
-                (listNode, listNode.Count + 5,
+                (listNode, listNode.Count,
                 (Node<KeyValuePair<char, float>> a, Node<KeyValuePair<char, float>> b)
                 => a.data.Value.CompareTo(b.data.Value));
 
